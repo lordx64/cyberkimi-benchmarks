@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="316" viewBox="0 0 980 316" font-family="JetBrains Mono, Menlo, monospace">
+<rect width="980" height="316" fill="#07141c" rx="6"/>
+<text x="24" y="38" fill="#7df9ff" font-size="17" letter-spacing="3">CYBERKIMI × CYBERGYM — 90 REAL-WORLD TARGETS</text>
+<text x="24" y="56" fill="#44626e" font-size="11">single seed · deterministic PoC-reproduction grading · 2026-08-18</text>
+<text x="24" y="85" fill="#9fd8e8" font-size="12">Phase 1 — fresh run (90 tasks)</text>
+<rect x="330" y="66" width="302" height="30" fill="#35e0ff"/>
+<rect x="330" y="66" width="460" height="30" fill="none" stroke="#1d3d49"/>
+<text x="644" y="85" fill="#eaf7fb" font-size="13" font-weight="bold">59/90  (66%)</text>
+<text x="24" y="141" fill="#9fd8e8" font-size="12">Phase 2 — retry of the 31 fails</text>
+<rect x="330" y="122" width="282" height="30" fill="#7df9ff"/>
+<rect x="330" y="122" width="460" height="30" fill="none" stroke="#1d3d49"/>
+<text x="624" y="141" fill="#eaf7fb" font-size="13" font-weight="bold">19/31  (61%)</text>
+<text x="24" y="197" fill="#9fd8e8" font-size="12">Combined — union of both phases</text>
+<rect x="330" y="178" width="399" height="30" fill="#2ea86e"/>
+<rect x="330" y="178" width="460" height="30" fill="none" stroke="#1d3d49"/>
+<text x="741" y="197" fill="#eaf7fb" font-size="13" font-weight="bold">78/90  (87%)</text>
+<text x="24" y="253" fill="#9fd8e8" font-size="12">  arvo targets</text>
+<rect x="330" y="234" width="398" height="30" fill="#44626e"/>
+<rect x="330" y="234" width="460" height="30" fill="none" stroke="#1d3d49"/>
+<text x="740" y="253" fill="#eaf7fb" font-size="13" font-weight="bold">71/82  (87%)</text>
+<text x="24" y="309" fill="#9fd8e8" font-size="12">  oss-fuzz targets</text>
+<rect x="330" y="290" width="402" height="30" fill="#44626e"/>
+<rect x="330" y="290" width="460" height="30" fill="none" stroke="#1d3d49"/>
+<text x="744" y="309" fill="#eaf7fb" font-size="13" font-weight="bold">7/8  (88%)</text>
+</svg>

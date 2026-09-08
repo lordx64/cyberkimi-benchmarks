@@ -1,34 +1,36 @@
-# CyberKimi × ExploitBench — Results & Evidence
+# CyberKimi — Benchmarks & Evidence
 
-Private staging repo for CyberKimi's ExploitBench (bench-v8) scores. Goes public
-when the full 14-bug matrix completes. Everything needed to independently verify
-the score lives here: per-episode transcripts, tool-call logs, grade calls,
-score cards, and audit bundles.
+Public evidence for CyberKimi's cyber capability claims. Every score published
+here ships with the raw material needed to audit it: transcripts, tool-call
+logs, grader outputs.
 
-## Method
+CyberKimi is Kimi K3 with the refusal layer ablated and cyber-tuning on top,
+served on our own GPU infrastructure. [adverserial.ai](https://adverserial.ai)
 
-- **Benchmark**: ExploitBench bench-v8, 14-bug historical-baseline subset,
-  400-turn episodes, seed 1.
-- **Model under test**: `cyberkimi-v1` (CyberKimi v1) served by vLLM on
-  a private GPU node, MXFP4 weights, 512K-token context.
-- **Harness**: stock exploitbench CLI (no harness modifications). Model routed
-  via OpenAI-compatible endpoint; every LLM turn is CyberKimi.
-- **Integrity**: full transcripts published per run, including every harness
-  nudge and any prompt-level assistance, verbatim.
+## Benchmarks
 
-## ★ CVE-2024-6100 campaign (2026-08-09) — full write-up
+### [`CyberGym/`](CyberGym/) — real-world crash reproduction (90 targets)
 
-**[CVE-2024-6100.md](CVE-2024-6100.md)** — three-way experiment on the bench's
-hardest WASM bug: CyberKimi unassisted **8/16** vs stock Kimi K3 **4/16** vs
-CyberKimi + disclosed methodology pack **10/16**. Includes the full leaderboard
-chart (only Mythos 16/15 and GPT 5.5-Codex-AutoNudge 15.0 sit above the
-pack-assisted run), the capability-by-capability story, and the road to
-Mythos. Full transcripts + grade calls in `runs/cve-2024-6100/`.
+Real sanitizer bugs from production fuzzing (arvo / oss-fuzz); the agent must
+write a PoC that reproduces the crash under deterministic re-execution grading.
 
-![chart](assets/cve-2024-6100-chart.svg)
+**78 / 90 solved (86.7%)** — 65.6% first-try, 61% of failures recovered on a
+single retry. Full traces, results tables, and analysis included.
 
-## Layout
+### [`ExploitBench/`](ExploitBench/) — V8 exploitation ladder (CVE-2024-6100)
 
-- `runs/<env>/` — per-episode evidence: transcript.jsonl, grade_calls.jsonl
-- `runs/cyberkimi-v8-matrix4/` — wave-1 evidence (1939, 6100, 10231)
-- `assets/` — charts
+Beyond crash reproduction: 16 graded capabilities from coverage to arbitrary
+code execution on the bench's hardest WASM type-confusion bug.
+
+**8/16 unassisted** (2× the stock Kimi K3 control at 4/16), **10/16** with a
+disclosed methodology pack — behind only Mythos (16/15) and GPT 5.5-Codex
+AutoNudge (15.0) on the public leaderboard at time of run.
+
+## Integrity notes
+
+- Single-seed runs are labeled as such; leaderboard rows from other vendors
+  are multi-seed averages.
+- Combined/union scores are always presented next to first-try rates.
+- Harnesses are stock; model routing is disclosed per run.
+
+Contact: contact@adverserial.ai
