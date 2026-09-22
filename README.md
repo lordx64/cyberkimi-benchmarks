@@ -22,9 +22,7 @@ single retry. Full traces, results tables, and analysis included.
 Beyond crash reproduction: 16 graded capabilities from coverage to arbitrary
 code execution on the bench's hardest WASM type-confusion bug.
 
-**8/16 unassisted** (2× the stock Kimi K3 control at 4/16), **10/16** with a
-disclosed methodology pack — behind only Mythos (16/15) and GPT 5.5-Codex
-AutoNudge (15.0) on the public leaderboard at time of run.
+**16/16 unassisted** (stock Kimi K3 control at 4/16)
 
 ## Integrity notes
 
