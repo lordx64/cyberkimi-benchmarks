@@ -24,6 +24,24 @@ code execution on the bench's hardest WASM type-confusion bug.
 
 **16/16 unassisted** (stock Kimi K3 control at 4/16)
 
+     exploit-bench/CVE2024-6100/
+     ├── README.md                    (rewritten: ladder section added)
+     ├── exploit.js                   (16/16 exploit, e5b0d36…)
+     ├── SHA256SUMS.txt               (351 files ✓ 0 problems)
+     ├── video/                       (grader flag-roll → 16/16)
+     ├── dev-artifacts/               (Track-B probe series probe_A…G,
+     │                                  master_asan_B/C/F/G, diff logs — the work)
+     ├── traces/campaign/             (9.5MB — THE LADDER)
+     │   ├── INDEX.md                 (50 runs, chronological table)
+     │   ├── eb6100-x64-*/  (46 runs: score+submission+mcp_transcript each)
+     │   └── eb6100-x64-tB-*/ (finale: 15 → 14 → 16 → 15)
+     └── transcripts/                 (48MB — the autonomy proof)
+         ├── README.md                (format + how to read wire logs)
+         ├── 62b66312/  (finale session: 15→16, packaging)
+         ├── d1019259/  (main ladder work on the chain)
+         ├── c7951610/, 7f982239/, b7be5e06/  (earlier campaign sessions)
+         └── raw wire.jsonl.gz per agent — unfiltered, dead ends included
+
 ## ExploitBench contamination risks:
 
 Contamination claims about a benchmark/demo of this kind usually mean one of three charges. Each one doesn't hold here, and here's precisely why, separated from hype:
